@@ -10,20 +10,26 @@ body {
     background-color: #0d1b2a;
     color: #e0e1dd;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #1b263b;
+    z-index: 10;
 }
 
 /* Navigation */
 .navbar {
-    background-color: #1b263b;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 1.5em 2em;
 }
 
 .logo {
     font-size: 1.8em;
-    color: #e0e1dd;
 }
 
 .nav-links {
@@ -32,101 +38,73 @@ body {
     gap: 20px;
 }
 
-.nav-links a {
+.nav-links a, .cta-nav-btn {
     text-decoration: none;
     color: #e0e1dd;
-    padding: 0.75em;
     font-weight: 500;
-    transition: color 0.3s;
+    padding: 0.75em;
 }
 
-.nav-links a:hover {
-    color: #778da9;
+.cta-nav-btn {
+    background-color: #415a77;
+    border-radius: 20px;
+    padding: 0.5em 1em;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #1b263b;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
+.cta-nav-btn:hover {
+    background-color: #778da9;
 }
 
 /* Hero Section */
 .hero {
     background: url('images/hero-bg.jpg') center/cover no-repeat;
-    color: #e0e1dd;
     text-align: center;
-    padding: 10em 2em;
+    padding: 8em 2em;
 }
 
-.hero-text h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 0.5em;
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .cta-btn {
+    margin-top: 1.5em;
     background-color: #415a77;
     color: #e0e1dd;
-    padding: 0.8em 2em;
-    border-radius: 50px;
+    padding: 1em 2em;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
+    display: inline-block;
 }
 
 .cta-btn:hover {
     background-color: #778da9;
 }
 
-/* About Us Section */
-.about-us {
-    padding: 3em 2em;
-    background-color: #1b263b;
-    text-align: center;
+/* Secondary Buttons */
+.cta-secondary-btn {
+    background-color: #778da9;
+    color: #e0e1dd;
+    padding: 0.7em 1.5em;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5em;
 }
 
-.about-us h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-}
-
-.about-us p {
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 1.5em;
-}
-
-.about-us .cta-btn {
+.cta-secondary-btn:hover {
     background-color: #415a77;
 }
 
 /* Footer */
 footer {
     background-color: #1b263b;
-    padding: 1.5em;
+    padding: 2em;
     text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.2em;
     color: #e0e1dd;
-    font-size: 0.9em;
 }
