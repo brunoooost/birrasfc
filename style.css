@@ -10,6 +10,7 @@ body {
   background-color: #1A1A2E;
   color: #E1E8F0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -19,11 +20,18 @@ header {
   align-items: center;
   background-color: #162447;
   padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 header .logo h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ffffff;
+  font-weight: bold;
 }
 
 nav ul {
@@ -40,37 +48,71 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
+  position: relative;
 }
 
 nav ul li a:hover {
   color: #4F6D7A;
 }
 
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #4F6D7A;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 /* Hero Section */
 .hero {
-  text-align: center;
-  background-color: #1F4068;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1F4068, #162447);
   color: white;
-  padding: 80px 20px;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .hero-content {
+  max-width: 700px;
+  animation: fadeIn 2s ease-out;
 }
 
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .cta-btn {
   background-color: #4F6D7A;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 40px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
@@ -78,83 +120,73 @@ nav ul li a:hover {
   background-color: #557C8A;
 }
 
-/* Players List */
-.players-list {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.players-list h2 {
-  font-size: 2.5rem;
-  color: #E1E8F0;
-  margin-bottom: 30px;
-}
-
-.players-container {
+/* Stats Section */
+.stats {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.player-card {
-  background-color: #1F4068;
-  width: 250px;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.player-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.player-card h3 {
-  font-size: 1.5rem;
-  margin-top: 15px;
-}
-
-.player-card p {
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-/* Results Section */
-.results {
+  justify-content: space-around;
   padding: 60px 20px;
-  text-align: center;
+  background-color: #1A1A2E;
+  animation: slideInUp 1s ease-out;
 }
 
-.results h2 {
-  font-size: 2.5rem;
-  color: #E1E8F0;
-  margin-bottom: 30px;
-}
-
-.match-card {
+.stat-card {
   background-color: #162447;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease;
 }
 
-.match-card p {
-  font-size: 1.2rem;
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.stat-card h3 {
+  font-size: 3rem;
   color: #E1E8F0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  color: #A9B0B7;
 }
 
 /* Footer */
 footer {
   background-color: #162447;
   text-align: center;
-  padding: 10px 20px;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  animation: fadeIn 2s ease-out;
 }
 
 footer p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #E1E8F0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
