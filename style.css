@@ -92,18 +92,36 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #1F4068, #162447);
-  color: white;
-  height: 60vh;
-  text-align: center;
-  padding: 20px;
+  position: relative; /* Needed for the overlay positioning */
+  background-image: url('your-image-url.jpg'); /* Set the background image */
   background-size: cover;
   background-position: center;
+  color: white;
+  height: 85vh; /* Adjust this height as needed */
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; /* Ensure image doesn’t overflow */
+}
+
+/* Transparent overlay for the background image */
+.hero::before {
+  content: ''; /* Empty content */
+  position: absolute; /* Position overlay over the background */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://services.meteored.com/img/article/la-ciencia-del-futbol-conoce-el-efecto-magnus-sobre-la-pelota-mundial-qatar-messi-1670921271514_1280.jpg'); /* Same background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Set the image opacity here (0 to 1) */
+  z-index: -1; /* Ensure it stays behind the content */
 }
 
 .hero .hero-content {
   max-width: 700px;
   animation: fadeIn 2s ease-out;
+  position: relative; /* Ensures text is above the overlay */
 }
 
 .hero h2 {
@@ -136,6 +154,8 @@ nav ul li a:hover::after {
   background-color: #557C8A;
   border-color: #B8860B; /* Gold border on hover */
 }
+
+
 
 /* Hero Section Adjustments for Mobile */
 @media (max-width: 768px) {
