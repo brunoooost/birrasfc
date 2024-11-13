@@ -11,7 +11,7 @@ body {
   color: #E1E8F0;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 80px; /* Prevent content from hiding under fixed header */
+  padding-top: 70px; /* To prevent content from being hidden under the header */
 }
 
 /* Header */
@@ -20,7 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #162447;
-  padding: 20px 40px;
+  padding: 15px 20px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -30,9 +30,8 @@ header {
 }
 
 header .logo h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ffffff;
-  font-weight: bold;
 }
 
 nav ul {
@@ -47,43 +46,30 @@ nav ul li {
 nav ul li a {
   color: #E1E8F0;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  position: relative;
 }
 
 nav ul li a:hover {
   color: #4F6D7A;
 }
 
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #4F6D7A;
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* Mobile Navigation */
+/* Mobile Navigation Adjustments */
 @media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    margin-top: 10px;
   }
 
   nav ul li {
     margin-left: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -94,72 +80,73 @@ nav ul li a:hover::after {
   align-items: center;
   background: linear-gradient(135deg, #1F4068, #162447);
   color: white;
-  height: 60vh;
+  height: 50vh;
   text-align: center;
   padding: 20px;
-  background-size: cover;
-  background-position: center;
 }
 
 .hero .hero-content {
-  max-width: 700px;
-  animation: fadeIn 2s ease-out;
+  max-width: 90%;
 }
 
 .hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 20px;
-  font-weight: 300;
 }
 
 .cta-btn {
   background-color: #4F6D7A;
   color: #fff;
-  padding: 12px 30px;
+  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 25px;
   font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
   background-color: #557C8A;
 }
 
-/* Hero Section Adjustments for Mobile */
+/* Hero Section Mobile Adjustments */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2.5rem;
+  .hero {
+    height: 40vh;
+    padding: 20px;
   }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
   .hero p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    font-size: 0.9rem;
   }
 }
 
-/* Stats Section (for index.html) */
+/* Stats Section */
 .stats {
   display: flex;
-  justify-content: space-around;
-  padding: 60px 20px;
-  background-color: #1A1A2E;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 10px;
   gap: 20px;
 }
 
 .stat-card {
   background-color: #162447;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
-  width: 200px;
+  width: 150px;
   transition: transform 0.3s ease;
 }
 
@@ -168,116 +155,80 @@ nav ul li a:hover::after {
 }
 
 .stat-card h3 {
-  font-size: 2.5rem;
-  color: #E1E8F0;
-  font-weight: bold;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 .stat-card p {
   font-size: 1rem;
-  color: #A9B0B7;
 }
 
-@media (max-width: 768px) {
-  .stats {
-    flex-direction: column;
-    align-items: center;
-  }
-  .stat-card {
-    width: 80%;
-  }
-}
-
-/* Results Section (results.html) */
+/* Results Section */
 .results {
-  padding: 80px 20px;
-  background-color: #1A1A2E;
+  padding: 60px 20px;
   text-align: center;
-}
-
-.results h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
 }
 
 .match-card {
   background-color: #162447;
   margin: 20px auto;
-  width: 80%;
-  max-width: 500px;
-  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.match-card:hover {
-  transform: translateY(-10px);
 }
 
 .match-card h3 {
-  font-size: 2rem;
-  color: #E1E8F0;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .match-card p {
-  font-size: 1.2rem;
-  color: #A9B0B7;
+  font-size: 1rem;
 }
 
-/* Players Section (players.html) */
+/* Players Section */
 .players-container {
-  padding: 80px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  padding: 40px 20px;
 }
 
 .player-card {
-  width: 250px;
+  width: 100%;
+  max-width: 300px;
   background-color: #162447;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.player-card:hover {
-  transform: translateY(-10px);
 }
 
 .player-card img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
 }
 
 .player-card h3 {
-  font-size: 1.5rem;
-  margin-top: 15px;
-  color: #E1E8F0;
+  font-size: 1.4rem;
+  margin-top: 10px;
 }
 
 .player-card p {
-  font-size: 1rem;
-  color: #A9B0B7;
+  font-size: 0.9rem;
 }
 
 /* Footer */
 footer {
   background-color: #162447;
   text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 15px 0;
+  margin-top: 20px;
 }
 
 footer p {
-  font-size: 1rem;
-  color: #E1E8F0;
+  font-size: 0.9rem;
 }
 
 /* Animations */
@@ -287,5 +238,36 @@ footer p {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Media Queries for Mobile Adjustments */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .cta-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .match-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .player-card {
+    width: 100%;
+    max-width: 250px;
   }
 }
