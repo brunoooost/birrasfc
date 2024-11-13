@@ -12,6 +12,48 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+/* Results Section */
+.results {
+  padding: 60px 20px;
+  background-color: #1A1A2E;
+  text-align: center;
+}
+
+.results h2 {
+  font-size: 2.5rem;
+  color: #E1E8F0;
+  margin-bottom: 30px;
+}
+
+.match-card {
+  background-color: #162447;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-10px);
+}
+
+.match-card h3 {
+  font-size: 1.8rem;
+  color: #E1E8F0;
+}
+
+.match-card p {
+  font-size: 1.2rem;
+  color: #A9B0B7;
+}
+
+.match-card strong {
+  font-weight: bold;
+}
+
+
 /* Player Card Styles */
 .players-list {
   padding: 60px 20px;
