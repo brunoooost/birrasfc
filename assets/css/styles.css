@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #006400;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.news {
+    padding: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
