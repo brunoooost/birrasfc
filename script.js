@@ -4,29 +4,36 @@ function toggleMenu() {
     navLinks.classList.toggle("open");
 }
 
-// Players list
-const players = ["Victor Valero", "Juanse Garcia", "Andreu Belon"];
-const playersList = document.getElementById("players-list");
+// Load Players and Results
+document.addEventListener("DOMContentLoaded", function() {
+    // Dynamic loading for players
+    const players = [
+        "John Doe", "Jane Smith", "Alex Johnson"
+    ];
 
-if (playersList) {
-    players.forEach(player => {
-        const li = document.createElement("li");
-        li.textContent = player;
-        playersList.appendChild(li);
-    });
-}
+    const playersList = document.getElementById("players-list");
+    if (playersList) {
+        players.forEach(player => {
+            const li = document.createElement("li");
+            li.className = "player-item";
+            li.textContent = player;
+            playersList.appendChild(li);
+        });
+    }
 
-// Results list
-const results = [
-    { match: "Team A vs Team B", score: "3-2" },
-    { match: "Team C vs Team D", score: "1-1" }
-];
-const resultsList = document.getElementById("results-list");
+    // Dynamic loading for results
+    const results = [
+        { match: "Team A vs Team B", score: "3-2" },
+        { match: "Team C vs Team D", score: "1-1" }
+    ];
 
-if (resultsList) {
-    results.forEach(result => {
-        const li = document.createElement("li");
-        li.textContent = `${result.match}: ${result.score}`;
-        resultsList.appendChild(li);
-    });
-}
+    const resultsList = document.getElementById("results-list");
+    if (resultsList) {
+        results.forEach(result => {
+            const li = document.createElement("li");
+            li.className = "result-item";
+            li.textContent = `${result.match}: ${result.score}`;
+            resultsList.appendChild(li);
+        });
+    }
+});
