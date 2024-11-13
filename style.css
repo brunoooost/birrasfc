@@ -105,56 +105,45 @@ nav ul li a:hover::after {
   font-weight: 300;
 }
 
-/* Players Section */
-.players-list {
+/* Results Section */
+.results {
   padding: 80px 20px;
-  text-align: center;
   background-color: #1A1A2E;
 }
 
-.players-list h2 {
+.results h2 {
   font-size: 2.5rem;
   color: #E1E8F0;
   margin-bottom: 30px;
-}
-
-.players-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.player-card {
-  background-color: #162447;
-  width: 250px;
-  padding: 20px;
-  border-radius: 10px;
   text-align: center;
+}
+
+.match-card {
+  background-color: #162447;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
-.player-card:hover {
+.match-card:hover {
   transform: translateY(-10px);
 }
 
-.player-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.player-card h3 {
-  font-size: 1.5rem;
-  margin-top: 15px;
+.match-card h3 {
+  font-size: 1.8rem;
   color: #E1E8F0;
 }
 
-.player-card p {
+.match-card p {
   font-size: 1.2rem;
   color: #A9B0B7;
-  margin-top: 5px;
+}
+
+.match-card strong {
+  font-weight: bold;
 }
 
 /* Footer */
