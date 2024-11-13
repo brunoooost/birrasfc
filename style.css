@@ -105,20 +105,35 @@ nav ul li a:hover::after {
   font-weight: 300;
 }
 
+.cta-btn {
+  background-color: #4F6D7A;
+  color: #fff;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #557C8A;
+}
+
 /* Results Section */
-.results {
+.results, .players-list {
   padding: 80px 20px;
   background-color: #1A1A2E;
 }
 
-.results h2 {
+.results h2, .players-list h2 {
   font-size: 2.5rem;
   color: #E1E8F0;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.match-card {
+.match-card, .player-card {
   background-color: #162447;
   padding: 20px;
   margin: 20px 0;
@@ -128,22 +143,47 @@ nav ul li a:hover::after {
   text-align: center;
 }
 
-.match-card:hover {
+.match-card:hover, .player-card:hover {
   transform: translateY(-10px);
 }
 
-.match-card h3 {
+.match-card h3, .player-card h3 {
   font-size: 1.8rem;
   color: #E1E8F0;
 }
 
-.match-card p {
+.match-card p, .player-card p {
   font-size: 1.2rem;
   color: #A9B0B7;
 }
 
-.match-card strong {
+.match-card strong, .player-card strong {
   font-weight: bold;
+}
+
+.players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.player-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.player-card h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #E1E8F0;
+}
+
+.player-card p {
+  font-size: 1.2rem;
+  color: #A9B0B7;
+  margin-top: 5px;
 }
 
 /* Footer */
@@ -170,4 +210,97 @@ footer p {
   to {
     opacity: 1;
   }
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background-color: #1A1A2E;
+  animation: slideInUp 1s ease-out;
+}
+
+.stat-card {
+  background-color: #162447;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  color: #E1E8F0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  color: #A9B0B7;
+}
+
+/* Results Section Adjustments */
+.results {
+  padding: 80px 20px;
+  background-color: #1A1A2E;
+}
+
+.match-card {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.match-card h3 {
+  font-size: 2rem;
+}
+
+.match-card p {
+  font-size: 1.2rem;
+}
+
+/* Flexbox Layout for Players */
+.players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Player Card Styles */
+.player-card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+  background-color: #162447;
+}
+
+.player-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.player-card h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #E1E8F0;
+}
+
+.player-card p {
+  font-size: 1.2rem;
+  color: #A9B0B7;
+  margin-top: 5px;
 }
