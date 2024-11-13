@@ -1,27 +1,22 @@
-// List of players
-const players = ["John Doe", "Jane Smith", "Alex Johnson", "Emily Davis"];
-const playersList = document.getElementById("players-list");
-
-if (playersList) {
-    players.forEach(player => {
-        const li = document.createElement("li");
-        li.textContent = player;
-        playersList.appendChild(li);
-    });
+// Toggle mobile menu
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('open');
 }
 
-// List of results
-const results = [
-    { match: "Team A vs Team B", score: "3-2" },
-    { match: "Team C vs Team D", score: "1-1" },
-    { match: "Team E vs Team F", score: "0-4" }
+// List of upcoming matches
+const matches = [
+    { opponent: "Team A", date: "Nov 20, 2024" },
+    { opponent: "Team B", date: "Dec 5, 2024" },
+    { opponent: "Team C", date: "Jan 10, 2025" }
 ];
-const resultsList = document.getElementById("results-list");
 
-if (resultsList) {
-    results.forEach(result => {
+const matchesList = document.getElementById("upcoming-matches");
+
+if (matchesList) {
+    matches.forEach(match => {
         const li = document.createElement("li");
-        li.textContent = `${result.match}: ${result.score}`;
-        resultsList.appendChild(li);
+        li.textContent = `${match.opponent} - ${match.date}`;
+        matchesList.appendChild(li);
     });
 }
