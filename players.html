@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Players - Football Team</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Players - Futbol Team</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Football Team</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="players.html">Players</a></li>
-                <li><a href="results.html">Results</a></li>
-            </ul>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <h1>Futbol Team</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="results.html">Results</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Players Section -->
-    <section class="players">
-        <h2>Our Players</h2>
-        <ul id="players-list"></ul>
-        <a href="index.html" class="cta-secondary-btn">Back to Home</a>
-    </section>
+  <section class="players-list">
+    <h2>Our Players</h2>
+    <div class="player">
+      <img src="player1.jpg" alt="Player 1">
+      <h3>John Doe</h3>
+      <p>Position: Forward</p>
+    </div>
+    <div class="player">
+      <img src="player2.jpg" alt="Player 2">
+      <h3>Jane Smith</h3>
+      <p>Position: Midfielder</p>
+    </div>
+    <!-- Add more players as needed -->
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Football Team | All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Futbol Team. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
