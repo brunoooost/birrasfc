@@ -1,16 +1,8 @@
 /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #0d1b2a;
     color: #e0e1dd;
-    line-height: 1.6;
-    overflow-x: hidden;
 }
 
 header {
@@ -20,91 +12,28 @@ header {
     z-index: 10;
 }
 
-/* Navigation */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 1.5em 2em;
 }
 
-.logo {
-    font-size: 1.8em;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a, .cta-nav-btn {
-    text-decoration: none;
-    color: #e0e1dd;
-    font-weight: 500;
-    padding: 0.75em;
-}
-
-.cta-nav-btn {
-    background-color: #415a77;
-    border-radius: 20px;
-    padding: 0.5em 1em;
-}
-
-.cta-nav-btn:hover {
-    background-color: #778da9;
-}
-
-/* Hero Section */
 .hero {
     background: url('images/hero-bg.jpg') center/cover no-repeat;
     text-align: center;
     padding: 8em 2em;
 }
 
-.hero-text {
-    max-width: 600px;
-    margin: 0 auto;
+.players, .results {
+    padding: 2em;
+    text-align: center;
 }
 
-.cta-btn {
-    margin-top: 1.5em;
-    background-color: #415a77;
-    color: #e0e1dd;
-    padding: 1em 2em;
-    border-radius: 30px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.cta-btn:hover {
-    background-color: #778da9;
-}
-
-/* Secondary Buttons */
 .cta-secondary-btn {
     background-color: #778da9;
     color: #e0e1dd;
     padding: 0.7em 1.5em;
     border-radius: 20px;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 1.5em;
-}
-
-.cta-secondary-btn:hover {
-    background-color: #415a77;
-}
-
-/* Footer */
-footer {
-    background-color: #1b263b;
-    padding: 2em;
-    text-align: center;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    font-size: 1.2em;
-    color: #e0e1dd;
+    margin-top: 2em;
 }
