@@ -31,7 +31,7 @@ header {
 
 header .logo h1 {
   font-size: 2rem;
-  color: #ffffff;
+  color: #B8860B; /* Gold color for logo */
   font-weight: bold;
 }
 
@@ -53,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #4F6D7A;
+  color: #B8860B; /* Gold color on hover */
 }
 
 nav ul li a::after {
@@ -61,7 +61,7 @@ nav ul li a::after {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #4F6D7A;
+  background-color: #B8860B; /* Gold underline */
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
@@ -111,6 +111,7 @@ nav ul li a:hover::after {
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  color: #B8860B; /* Gold color for heading */
 }
 
 .hero p {
@@ -128,10 +129,12 @@ nav ul li a:hover::after {
   font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  border: 2px solid #B8860B; /* Gold border */
 }
 
 .cta-btn:hover {
   background-color: #557C8A;
+  border-color: #B8860B; /* Gold border on hover */
 }
 
 /* Hero Section Adjustments for Mobile */
@@ -161,6 +164,7 @@ nav ul li a:hover::after {
   text-align: center;
   width: 200px;
   transition: transform 0.3s ease;
+  border: 2px solid #B8860B; /* Gold border */
 }
 
 .stat-card:hover {
@@ -169,7 +173,7 @@ nav ul li a:hover::after {
 
 .stat-card h3 {
   font-size: 2.5rem;
-  color: #E1E8F0;
+  color: #B8860B; /* Gold color for stats heading */
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -199,6 +203,7 @@ nav ul li a:hover::after {
 .results h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
+  color: #B8860B; /* Gold color for results heading */
 }
 
 .match-card {
@@ -209,6 +214,7 @@ nav ul li a:hover::after {
   padding: 30px;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  border: 2px solid #B8860B; /* Gold border */
 }
 
 .match-card:hover {
@@ -217,7 +223,7 @@ nav ul li a:hover::after {
 
 .match-card h3 {
   font-size: 2rem;
-  color: #E1E8F0;
+  color: #B8860B; /* Gold color for match heading */
 }
 
 .match-card p {
@@ -242,6 +248,7 @@ nav ul li a:hover::after {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  border: 2px solid #B8860B; /* Gold border */
 }
 
 .player-card:hover {
@@ -257,7 +264,7 @@ nav ul li a:hover::after {
 .player-card h3 {
   font-size: 1.5rem;
   margin-top: 15px;
-  color: #E1E8F0;
+  color: #FFD700; /* Gold color for player name */
 }
 
 .player-card p {
@@ -273,12 +280,14 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  border-top: 2px solid #B8860B; /* Gold border on top of footer */
 }
 
 footer p {
   font-size: 1rem;
-  color: #E1E8F0;
+  color: #B8860B; /* Gold color for footer text */
 }
+
 /* Mobile Menu */
 .nav-links {
   display: flex;
@@ -314,7 +323,7 @@ footer p {
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #B8860B; /* Gold hamburger icon */
   border-radius: 5px;
 }
 
@@ -332,37 +341,6 @@ footer p {
   transform-origin: 2px;
 }
 
-/* Add media query for mobile screens */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 50px; /* Adjust according to the header height */
-    left: 0;
-    padding: 20px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-
-  .nav-links a:hover {
-    color: #f39c12;
-  }
-}
-
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -372,4 +350,3 @@ footer p {
     opacity: 1;
   }
 }
-
