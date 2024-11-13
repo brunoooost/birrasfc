@@ -1,39 +1,32 @@
 // Toggle mobile menu
-function toggleMenu() {
+document.getElementById("menu-toggle").addEventListener("click", function() {
     const navLinks = document.getElementById("nav-links");
     navLinks.classList.toggle("open");
-}
+});
 
 // Load Players and Results
 document.addEventListener("DOMContentLoaded", function() {
-    // Dynamic loading for players
-    const players = [
-        "John Doe", "Jane Smith", "Alex Johnson"
-    ];
-
-    const playersList = document.getElementById("players-list");
-    if (playersList) {
-        players.forEach(player => {
-            const li = document.createElement("li");
-            li.className = "player-item";
-            li.textContent = player;
-            playersList.appendChild(li);
-        });
-    }
-
-    // Dynamic loading for results
+    const players = ["John Doe", "Jane Smith", "Alex Johnson", "Chris Lee"];
     const results = [
         { match: "Team A vs Team B", score: "3-2" },
         { match: "Team C vs Team D", score: "1-1" }
     ];
 
+    // Dynamically add players
+    const playersList = document.getElementById("players-list");
+    players.forEach(player => {
+        const li = document.createElement("li");
+        li.className = "player-item";
+        li.textContent = player;
+        playersList.appendChild(li);
+    });
+
+    // Dynamically add results
     const resultsList = document.getElementById("results-list");
-    if (resultsList) {
-        results.forEach(result => {
-            const li = document.createElement("li");
-            li.className = "result-item";
-            li.textContent = `${result.match}: ${result.score}`;
-            resultsList.appendChild(li);
-        });
-    }
+    results.forEach(result => {
+        const li = document.createElement("li");
+        li.className = "result-item";
+        li.textContent = `${result.match}: ${result.score}`;
+        resultsList.appendChild(li);
+    });
 });
