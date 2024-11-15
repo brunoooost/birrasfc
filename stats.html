@@ -142,6 +142,19 @@
         .top-scorer p {
             font-size: 1.3rem;
         }
+      
+        .chart-container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #1b263b;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .chart-container h2 {
+            text-align: center;
+            color: #ffcc00;
+        }
 
         footer {
             text-align: center;
@@ -225,11 +238,46 @@
             </div>
         </div>
     </section>
+    <!-- Chart Section -->
+    <section class="chart-container">
+        <h2>Goals Per Match</h2>
+        <canvas id="goalsChart"></canvas>
+    </section>
 
     <!-- Footer -->
     <footer>
         &copy; 2024 Birras FC. All rights reserved.
     </footer>
+   <script>
+        // Chart.js Script for Goals Per Match
+        const ctx = document.getElementById('goalsChart').getContext('2d');
+        const goalsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Match 1', 'Match 2', 'Match 3', 'Match 4', 'Match 5', 'Match 6', 'Match 7'],
+                datasets: [{
+                    label: 'Goals Scored',
+                    data: [2, 3, 1, 4, 0, 5, 3],
+                    backgroundColor: '#ffcc00',
+                    borderColor: '#cc9900',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
