@@ -1,126 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jugadores -Birras FC</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jugadores - Birras FC</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0d;
+            color: #f5f5f5;
+            font-size: 16px;
+        }
+
+        header {
+            background-color: #0b0e16;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #b2b2b2;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            background-color: #1b263b;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .players-list {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .player-card {
+            background-color: #2b3a47;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .player-card:hover {
+            transform: translateY(-10px);
+            background-color: #3b4b60;
+        }
+
+        .player-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .player-card h3 {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .player-card p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0b0e16;
+            color: #777;
+            margin-top: 50px;
+        }
+
+    </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <h1>Birras FC</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="players.html">Jugadores</a></li>
-        <li><a href="results.html">Resultados</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="logo">Birras FC</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="players.html">Players</a>
+            <a href="stats.html">Statistics</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-  <!-- Hero Section (Optional) -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Conoce a los jugadores</h2>
-      <p>Conoce a las estrellas de Birras FC.</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Conoce a los jugadores</h2>
+        <p>Conoce a las estrellas de Birras FC.</p>
+    </section>
 
-  <!-- Players Section -->
-  <section class="players-list">
-    <div class="players-container">
-      <!-- Player 1 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/672d2b6b5752a4.44415153.jpg" alt="Player 1">
-        <h3>Victor Valero</h3>
-        <p>Posición: Defensa</p>
-        <p>Edad: 19</p>
-        <p>Goles: 5</p>
-      </div>
-      <!-- Player 2 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/672d2b79a32b47.45640079.jpg" alt="Player 2">
-        <h3>Andreu Belon</h3>
-        <p>Posición: Portero</p>
-        <p>Edad: 19</p>
-        <p>Goals: 5</p>
-      </div>
-      
-      <!-- Player 3 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/672d2b868c0989.17086976.jpg" alt="Player 1">
-        <h3>Juanse Garcia</h3>
-        <p>Posición: Medio</p>
-        <p>Edad: 19</p>
-        <p>Goles: 5</p>
-      </div>
-      
-      <!-- Player 4 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/672d2b5b00e2d4.54848610.jpg" alt="Player 1">
-        <h3>Marti Casanova</h3>
-        <p>Posición: Delantero</p>
-        <p>Edad: 19</p>
-        <p>Goles: 2</p>
-      </div>
-      
-      <!-- Player 5 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/672d2b46423f24.81137278.jpg" alt="Player 1">
-        <h3>Teo Pellise</h3>
-        <p>Posición: Medio</p>
-        <p>Edad: 19</p>
-        <p>Goles: 0</p>
-      </div>
-      
-      <!-- Player 6 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/672d2b9d637c87.35158221.jpg" alt="Player 1">
-        <h3>Bruno Salvatella</h3>
-        <p>Posición: Delantero</p>
-        <p>Edad: 17</p>
-        <p>Goles: 2</p>
-      </div>
-      
-      <!-- Player 7 Card -->
-      <div class="player-card">
-        <img src="https://apuntamelo.com/inscripcion/fotos/670e1b0882a280.08491196.jpg" alt="Player 1">
-        <h3>Eric Fernandez</h3>
-        <p>Posición: Defensa</p>
-        <p>Edad: 19</p>
-        <p>Goles: 3</p>
-      </div>
-      
-      <!-- Player 8 Card -->
-      <div class="player-card">
-        <img src="no.jpg" alt="Player 1">
-        <h3>Lucas Valero</h3>
-        <p>Posición: Medio</p>
-        <p>Edad: 19</p>
-        <p>Goles: 0</p>
-      </div>
-      
-      <!-- Player 9 Card -->
-      <div class="player-card">
-        <img src="no.jpg" alt="Player 1">
-        <h3>Fran Garcia</h3>
-        <p>Posición: Medio</p>
-        <p>Edad: 19</p>
-        <p>Goles: 0</p>
-      </div>
-      <!-- Add more players as needed -->
-    </div>
-  </section>
+    <!-- Players Section -->
+    <section class="players-list">
+        <!-- Player 1 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/672d2b6b5752a4.44415153.jpg" alt="Victor Valero">
+            <h3>Victor Valero</h3>
+            <p>Posición: Defensa</p>
+            <p>Edad: 19</p>
+            <p>Goles: 5</p>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Birras FC. Created by bst04.</p>
-  </footer>
+        <!-- Player 2 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/672d2b79a32b47.45640079.jpg" alt="Andreu Belon">
+            <h3>Andreu Belon</h3>
+            <p>Posición: Portero</p>
+            <p>Edad: 19</p>
+            <p>Goles: 5</p>
+        </div>
 
-  <script src="script.js"></script>
+        <!-- Player 3 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/672d2b868c0989.17086976.jpg" alt="Juanse Garcia">
+            <h3>Juanse Garcia</h3>
+            <p>Posición: Medio</p>
+            <p>Edad: 19</p>
+            <p>Goles: 5</p>
+        </div>
+
+        <!-- Player 4 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/672d2b5b00e2d4.54848610.jpg" alt="Marti Casanova">
+            <h3>Marti Casanova</h3>
+            <p>Posición: Delantero</p>
+            <p>Edad: 19</p>
+            <p>Goles: 2</p>
+        </div>
+
+        <!-- Player 5 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/672d2b46423f24.81137278.jpg" alt="Teo Pellise">
+            <h3>Teo Pellise</h3>
+            <p>Posición: Medio</p>
+            <p>Edad: 19</p>
+            <p>Goles: 0</p>
+        </div>
+
+        <!-- Player 6 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/672d2b9d637c87.35158221.jpg" alt="Bruno Salvatella">
+            <h3>Bruno Salvatella</h3>
+            <p>Posición: Delantero</p>
+            <p>Edad: 17</p>
+            <p>Goles: 2</p>
+        </div>
+
+        <!-- Player 7 Card -->
+        <div class="player-card">
+            <img src="https://apuntamelo.com/inscripcion/fotos/670e1b0882a280.08491196.jpg" alt="Eric Fernandez">
+            <h3>Eric Fernandez</h3>
+            <p>Posición: Defensa</p>
+            <p>Edad: 19</p>
+            <p>Goles: 3</p>
+        </div>
+
+        <!-- Player 8 Card -->
+        <div class="player-card">
+            <img src="no.jpg" alt="Lucas Valero">
+            <h3>Lucas Valero</h3>
+            <p>Posición: Medio</p>
+            <p>Edad: 19</p>
+            <p>Goles: 0</p>
+        </div>
+
+        <!-- Player 9 Card -->
+        <div class="player-card">
+            <img src="no.jpg" alt="Fran Garcia">
+            <h3>Fran Garcia</h3>
+            <p>Posición: Medio</p>
+            <p>Edad: 19</p>
+            <p>Goles: 0</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Birras FC. Created by bst04.</p>
+    </footer>
+
 </body>
+
 </html>
