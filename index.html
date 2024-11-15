@@ -1,61 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Birras FC</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birras FC - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0d;
+            color: #f5f5f5;
+        }
+
+        header {
+            background-color: #0b0e16;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #b2b2b2;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            height: 80vh;
+            background: linear-gradient(135deg, #0d1b2a, #1b263b);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.7rem;
+            color: #e6e6e6;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background-color: #ffcc00;
+            color: #0a0a0d;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #cc9900;
+        }
+
+        .stats-section {
+            background-color: #0b0e16;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .stats-section h2 {
+            font-size: 3rem;
+            color: #ffcc00;
+            margin-bottom: 50px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background-color: #1b263b;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .stat-box p {
+            font-size: 1.5rem;
+            color: #e6e6e6;
+        }
+
+        .btn-stats {
+            background-color: #004080;
+            color: #ffcc00;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        .btn-stats:hover {
+            background-color: #003366;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0b0e16;
+            color: #777;
+            margin-top: 50px;
+        }
+
+        .chart-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <h1>Birras FC</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="players.html">Jugadores</a></li>
-        <li><a href="results.html">Resultados</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="logo">Birras FC</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="players.html">Players</a>
+            <a href="#">Statistics</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Bienvenido a Birras FC</h2>
-      <p>"Donde el fútbol sala y las birras se combinan para crear el mejor juego."</p>
-      <a href="players.html" class="cta-btn">Conoce a los jugadores</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Birras FC</h1>
+        <p>The pride of football, where passion meets excellence.</p>
+        <a href="https://apuntamelo.com/partidos-equipo/9/347/27/1191/12559/1" target="_blank" class="btn">View Latest Matches</a>
+    </section>
 
-  <!-- Stats Section -->
-  <section class="stats">
-    <div class="stat-card">
-      <h3>6</h3>
-      <p>Partidos Jugados</p>
-    </div>
-    <div class="stat-card">
-      <h3>3</h3>
-      <p>Victorias</p>
-    </div>
-    <div class="stat-card">
-      <h3>1</h3>
-      <p>Empates</p>
-    </div>
-    <div class="stat-card">
-      <h3>2</h3>
-      <p>Derrotas</p>
-    </div>
-  </section>
+    <!-- Goals Scored Section -->
+    <section class="stats-section">
+        <h2>Season Highlights</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h3>Matches</h3>
+                <p>7</p>
+            </div>
+            <div class="stat-box">
+                <h3>Wins</h3>
+                <p>3</p>
+            </div>
+            <div class="stat-box">
+                <h3>Draws</h3>
+                <p>1</p>
+            </div>
+            <div class="stat-box">
+                <h3>Losses</h3>
+                <p>3</p>
+            </div>
+        </div>
+        <a href="https://apuntamelo.com/partidos-equipo/9/347/27/1191/12559/1" target="_blank" class="btn-stats">See Full Stats on Apúntamelo</a>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Birras FC. Created by bst04.</p>
-  </footer>
+    <!-- Goals Scored Section -->
+    <section class="stats-section">
+        <h2>Top Scorers</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <h3>Victor Valero Cenera</h3>
+                <p>7 Goals</p>
+            </div>
+            <div class="stat-box">
+                <h3>Juan Segundo Garcia Genta</h3>
+                <p>5 Goals</p>
+            </div>
+            <div class="stat-box">
+                <h3>Andreu Belon Valles</h3>
+                <p>5 Goals</p>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Birras FC. All rights reserved.
+    </footer>
+
+    
+        
 </body>
+
 </html>
