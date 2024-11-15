@@ -144,6 +144,33 @@
         .btn-stats:hover {
             background-color: #003366;
         }
+      
+      /* Location Section */
+        .location-section {
+            background-color: #1b263b;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .location-section h2 {
+            font-size: 3rem;
+            color: #ffcc00;
+            margin-bottom: 40px;
+        }
+
+        .location-map {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .location-description {
+            margin-top: 20px;
+            font-size: 1.3rem;
+            color: #b2b2b2;
+        }
 
         footer {
             text-align: center;
@@ -213,27 +240,26 @@
                 <p>3</p>
             </div>
         </div>
-        <a href="https://apuntamelo.com/partidos-equipo/9/347/27/1191/12559/1" target="_blank" class="btn-stats">See Full Stats on Apúntamelo</a>
+        <a href="stats.html" target="_blank" class="btn-stats">More Stats</a>
     </section>
 
-    <!-- Goals Scored Section -->
-    <section class="stats-section">
-        <h2>Top Scorers</h2>
-        <div class="stats-grid">
-            <div class="stat-box">
-                <h3>Victor Valero Cenera</h3>
-                <p>7 Goals</p>
-            </div>
-            <div class="stat-box">
-                <h3>Juan Segundo Garcia Genta</h3>
-                <p>5 Goals</p>
-            </div>
-            <div class="stat-box">
-                <h3>Andreu Belon Valles</h3>
-                <p>5 Goals</p>
-            </div>
-        </div>
-    </section>
+    <!-- Location Section -->
+<section class="location-section">
+    <h2>Location</h2>
+    <div class="location-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.3116106287707!2d2.114356562467215!3d41.378887631735786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f9d0882bff%3A0xaa0384757a6d6066!2sClub%20Deportivo%20Laiet%C3%A0!5e0!3m2!1ses!2ses!4v1731669499537!5m2!1ses!2ses" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="location-description">We play at Club Deportivo Laietà, a fantastic venue with top-notch facilities!</p>
+</section>
+
+
 
     
 
